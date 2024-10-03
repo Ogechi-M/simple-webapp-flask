@@ -102,6 +102,6 @@ docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 
 The following security measures were implemented in the process of building this project.
 
-- Using a minimal base image ubuntu:20.04
+- Using a minimal base image in Dockerfile ubuntu:20.04
 
 - 
