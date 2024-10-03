@@ -35,7 +35,7 @@ jobs:
     - name: Build and push Docker image
       run: |
         docker build -t ogechiesther/flask-app:${{ github.sha }} .
-        docker push yourdockerhubusername/flask-app:${{ github.sha }}
+        docker push ogechiesther/flask-app:${{ github.sha }}
 
     - name: Set up kubectl
       uses: azure/setup-kubectl@v1
