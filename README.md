@@ -106,4 +106,4 @@ The following security measures were implemented in the process of building this
 
 - Using a minimal base image in Dockerfile ubuntu:20.04
 
-- 
+- The Docker image was scanned for vulnerabilities using Trivy
