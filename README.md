@@ -4,17 +4,17 @@ This is a simple Flask web application that returns "Hello World" on the root UR
 
 # Prerequisites
 
-Python 3.x - Python is required to run this application locally.
+**Python 3.x** - Python is required to run this application locally.
 
-Docker - Docker is used to containerize the application and run it locally.
+**Docker** - Docker is used to containerize the application and run it locally.
 
-Git - To clone repositories and manage source code.
+**Git** - To clone repositories and manage source code.
 
-KinD - KinD is used to run Kubernetes clusters locally in Docker containers.
+**KinD** - KinD is used to run Kubernetes clusters locally in Docker containers.
 
-Kubectl - kubectl is the command-line tool used to interact with the Kubernetes cluster.
+**Kubectl** - kubectl is the command-line tool used to interact with the Kubernetes cluster.
 
-VS code - VS Code is recommended as your development environment.
+**VS code** - VS Code is recommended as your development environment.
 
 
 # Simple Web Application
