@@ -68,3 +68,6 @@ The following steps shows how the API was containerized using Docker.
 
 From the Dockerfile provided, build a Docker image by running the following command:
 
+```bash
+docker build -t <image-name> .
+```
