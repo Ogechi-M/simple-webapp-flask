@@ -98,6 +98,8 @@ docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 
 # Understanding the CI/CD Process
 
+# Deploying Flask Webapp to Kubernetes(KinD)
+
 # Security Measures Implemented
 
 The following security measures were implemented in the process of building this project.
