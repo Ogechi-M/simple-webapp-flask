@@ -95,3 +95,7 @@ docker pull <image-name> <dockerhub-username>/<repo-name>:<tag>
 ```bash
 docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 ```
+
+# Understanding the CI/CD Process
+
+# Security Measures Implemented
