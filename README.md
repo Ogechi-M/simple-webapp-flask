@@ -61,3 +61,10 @@ http://<IP>:5000/how%20are%20you            => I am good, how about you?
 ```
 
 # How to Containerize Flask Webapp
+
+The following steps shows how the API was containerized using Docker.
+
+## 1. Build a Docker Image
+
+From the Dockerfile provided, build a Docker image by running the following command:
+
