@@ -1,6 +1,7 @@
 # Project Description
 
-This is a simple Flask web application that returns "Hello World" on the root URL. The app is containerized using Docker, and the deployment process is automated via a CI/CD pipeline that pushes the Docker image to Docker Hub and deploys it to a Kubernetes cluster.
+This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
+This is used in the demonstration of the development of Ansible Playbooks. The app is containerized using Docker, and the deployment process is automated via a CI/CD pipeline that pushes the Docker image to Docker Hub and deploys it to a Kubernetes cluster.
 
 # Prerequisites
 
@@ -19,8 +20,6 @@ This is a simple Flask web application that returns "Hello World" on the root UR
 
 # Run Flask Webapp Locally
 
-This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
-This is used in the demonstration of the development of Ansible Playbooks.
   
   Below are the steps required to get this working on a base linux system.
   
