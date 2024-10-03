@@ -17,7 +17,7 @@ This is a simple Flask web application that returns "Hello World" on the root UR
 **VS code** - VS Code is recommended as your development environment.
 
 
-# Simple Web Application
+# Run Flask Webapp Locally
 
 This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
 This is used in the demonstration of the development of Ansible Playbooks.
