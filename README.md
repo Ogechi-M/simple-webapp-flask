@@ -2,6 +2,13 @@
 
 This is a simple Flask web application that returns "Hello World" on the root URL. The app is containerized using Docker, and the deployment process is automated via a CI/CD pipeline that pushes the Docker image to Docker Hub and deploys it to a Kubernetes cluster.
 
+# Prerequisites
+
+Python 3.x - Python is required to run this application locally.
+Docker - Docker is used to containerize the application and run it locally.
+Git - For version control
+
+
 # Simple Web Application
 
 This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
