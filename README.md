@@ -99,3 +99,9 @@ docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 # Understanding the CI/CD Process
 
 # Security Measures Implemented
+
+The following security measures were implemented in the process of building this project.
+
+-Using a minimal base image ubuntu:20.04
+
+- 
