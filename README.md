@@ -92,3 +92,6 @@ docker pull <image-name> <dockerhub-username>/<repo-name>:<tag>
 
 ## Containerizing Flask Webapp
 
+```bash
+docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
+```
