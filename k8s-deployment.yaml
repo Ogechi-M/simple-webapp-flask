@@ -40,3 +40,17 @@ spec:
       port: 80
       targetPort: 5000
   type: LoadBalancer
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-only-internal
+spec:
+  podSelector:
+    matchLabels:
+      app: flask-app
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector: {}
