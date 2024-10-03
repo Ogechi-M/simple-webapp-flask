@@ -71,3 +71,14 @@ From the Dockerfile provided, build a Docker image by running the following comm
 ```bash
 docker build -t <image-name> .
 ```
+
+## 2. Push image to Dockerhub
+
+To push your image to DockerHub, run the following command:
+```bash
+docker tag <image-name> <dockerhub-username>/<repo-name>:<tag>
+```
+
+```bash
+docker push <image-name> <dockerhub-username>/<repo-name>:<tag>
+```
