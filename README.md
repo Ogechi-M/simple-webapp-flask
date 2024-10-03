@@ -66,7 +66,7 @@ The following steps shows how the API was containerized using Docker.
 
 ## 1. Build a Docker Image
 
-From the Dockerfile provided, build a Docker image by running the following command:
+Using the Dockerfile provided, build a Docker image by running the following command:
 
 ```bash
 docker build -t <image-name> .
@@ -82,3 +82,13 @@ docker tag <image-name> <dockerhub-username>/<repo-name>:<tag>
 ```bash
 docker push <image-name> <dockerhub-username>/<repo-name>:<tag>
 ```
+
+## Pull image from Dockerhub
+
+Pull your docker image from Dockerhub using the following command:
+```bash
+docker pull <image-name> <dockerhub-username>/<repo-name>:<tag>
+```
+
+## Containerizing Flask Webapp
+
