@@ -72,7 +72,14 @@ docker run -p 80:8080 <dockerhub-username>/<repo-name>:<tag>
  In general, The pipeline automates testing, building, and deploying your Flask app to a Kubernetes cluster. 
 
  Here is a break down of the different stages of the CI/CD pileline:
- 
+
+## Build Job
+
+This job handles building and pushing the Docker image.
+
+### Step 1. Checkout Code:
+
+- This uses the actions/checkout@v3 GitHub Action to fetch the source code from my GitHub repository into the runner (a virtual machine that GitHub Actions provides for this pipeline).
 
  
 
