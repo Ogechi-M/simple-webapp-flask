@@ -112,6 +112,27 @@ To run the application in Kubernetes, you need to set up a local cluster using K
 kind create cluster --name flask-app-cluster
 ```
 
+### b. Verify the cluster is running:
+
+```bash
+kubectl cluster-info --context kind-flask-app-cluster
+```
+
+## 2. Apply Kubernetes Manifest
+
+The Kubernetes manifest file (k8s-manifest.yaml) defines the deployment and service for the Flask app. It deploys the app using the Docker image you created and exposed it using a NodePort service.
+
+```bash
+kubectl apply -f k8s-manifest.yaml
+```
+
+## 3. Access the Flask App
+
+After deploying, you can check the service for the NodePort:
+
+```bash
+kubectl get services
+```
 # Security Measures Implemented
 
 The following security measures were implemented in the process of building this project.
