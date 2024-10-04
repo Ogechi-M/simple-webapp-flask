@@ -225,6 +225,6 @@ The following security measures were implemented in the process of building this
 
 - In the CI/CD pipeline, a test job was included to test the code to ensure it works as expected by running unit tests.
 
-- Implemented proper secrets handling
+- Implemented proper Secrets management
   
 - Also only runs sucessfully if all the jobs where successful.
