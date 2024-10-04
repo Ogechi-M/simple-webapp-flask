@@ -110,4 +110,6 @@ The following security measures were implemented in the process of building this
 
 - Updated the docker file to enhance security and set the environmental variables for non interactive installation. The apt install command cleans up unnecessary files after installation.
 
+- Set resource limits in kubernetes to help avoid resource exaustion and malicious attacks such as Denial of service (DOS).
+
 - Implemented network policies in the kubernetes manifest file to restrict traffics between pods and also to control which pods can communicate with each other.
