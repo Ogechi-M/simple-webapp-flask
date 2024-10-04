@@ -100,6 +100,18 @@ docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 
 # Deploying Flask Webapp to Kubernetes(KinD)
 
+Follow the following steps to deploy the API to kubernetes.
+
+## 1. Create a Kubernetes Cluster with KinD
+
+To run the application in Kubernetes, you need to set up a local cluster using KinD:
+
+### a. Create the cluster:
+
+```bash
+kind create cluster --name flask-app-cluster
+```
+
 # Security Measures Implemented
 
 The following security measures were implemented in the process of building this project.
