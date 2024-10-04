@@ -21,13 +21,37 @@ This is used in the demonstration of the development of Ansible Playbooks. The a
 # Run Flask Webapp Locally
 
   
-  Below are the steps required to get this working on a base linux system.
-  
-  - **Install all required dependencies**
-  - **Install and Configure Web Server**
-  - **Start Web Server**
+  Below are the steps required to run this app locally:
    
-## 1. Install all required dependencies
+## 1. Clone the repository:
+```bash
+git clone https://github.com/mmumshad/simple-webapp-flask
+```
+
+```bash
+cd simple-webapp-flask
+```
+
+## 2. Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+## 3. Install the dependences:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Run the app
+
+```bash
+python app.py
+```
+
+The app should now be running at http://localhost:5000.
   
 
 
@@ -201,4 +225,6 @@ The following security measures were implemented in the process of building this
 
 - In the CI/CD pipeline, a test job was included to test the code to ensure it works as expected by running unit tests.
 
+- Implemented proper secrets handling
+  
 - Also only runs sucessfully if all the jobs where successful.
