@@ -93,10 +93,18 @@ docker pull <image-name> <dockerhub-username>/<repo-name>:<tag>
 ## Containerizing Flask Webapp
 
 ```bash
-docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
+docker run -p 80:8080 <dockerhub-username>/<repo-name>:<tag>
 ```
 
 # Understanding the CI/CD Process
+
+ In general, The pipeline automates testing, building, and deploying your Flask app to a Kubernetes cluster. 
+
+ Here is a break down of the different stages of the CI/CD pileline:
+
+ 
+
+
 
 # Deploying Flask Webapp to Kubernetes(KinD)
 
@@ -145,6 +153,8 @@ http://localhost:30000
 The following security measures were implemented in the process of building this project.
 
 
+- Used a trusted base image for the Dockerfile Ubuntu:20.04
+  
 - The Docker image was scanned for vulnerabilities using Trivy.
 
 - Updated the docker file to enhance security and set the environmental variables for non interactive installation. The apt install command cleans up unnecessary files after installation.
