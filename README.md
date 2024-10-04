@@ -81,9 +81,64 @@ This job handles building and pushing the Docker image.
 
 - This uses the actions/checkout@v3 GitHub Action to fetch the source code from my GitHub repository into the runner (a virtual machine that GitHub Actions provides for this pipeline).
 
- 
+ ### Step 2. Log in to Docker Hub:
 
+- This command logs in to Docker Hub using credentials my username and password that are securely stored in GitHub Secrets.
+- The credentials are passed into the command using echo and docker login.
 
+### Step 3. Build Docker Image:
+
+- This step runs docker build to create a Docker image from flask web application using the Dockerfile in the root of my repository.
+- It tags the image using the current commit hash (${{ github.sha }}) to ensure that each image is unique and can be traced back to the exact code.
+
+### Step 4. Push Docker Image:
+
+- After the image is built, it’s pushed to Docker Hub under my account using the same commit hash as the tag.
+- This makes the image publicly available for the deployment stage later on.
+
+## Test Job 
+
+This job tests the code to ensure it works as expected by running unit tests.
+
+### Step 1. Checkout Code:
+
+- Similar to the build job, this step fetches the repository code.
+
+### Step 2. Setup Python
+
+- This uses actions/setup-python@v3 to install Python in the virtual environment so you can run your Flask app and tests.
+- The version is set to 3.x, which will install the latest available version of Python 3.x.
+
+### Step 3. Install Dependences
+
+- This step installs all the required Python packages listed in the requirements.txt file, ensuring the app has everything it needs to run.
+- It installs packages like Flask, pytest, etc.
+
+### Step 4. Run Tests
+
+- This step runs all unit tests located in the tests directory using the unittest framework.
+- The command python3 -m unittest discover -s tests searches for all test files and runs them.
+- If any of the tests fail, this job will fail, and the deploy job will not be triggered.
+
+## Deploy Job
+
+This job handles deploying your Flask app to a Kubernetes cluster using the kubectl tool.
+
+### Step 1. Checkout Code
+
+- Like the previous jobs, it checks out the repository code.
+
+### Step 2. Set up kubectl:
+
+- This step uses azure/setup-kubectl@v3 to set up the kubectl command-line tool, which is used to interact with the Kubernetes cluster.
+- It installs the latest version of kubectl so it can be used it to apply the Kubernetes manifest.
+
+### Step 3. Deploy to Kubernetes:
+
+- This command runs kubectl apply -f kubernetes-manifest.yaml, which reads the Kubernetes manifest file and deploys the application to the Kubernetes cluster.
+- The environment variable KUBECONFIG is securely stored in GitHub Secrets and contains the credentials and configuration needed to access your Kubernetes cluster.
+
+For the purpose of integrating security into DevOps practices, The Test job depends on the success of the Build job to run and also the Delopoy job depends on the success of the Build and Test jobs to run
 
 # Deploying Flask Webapp to Kubernetes(KinD)
 
