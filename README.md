@@ -162,7 +162,7 @@ This job handles deploying your Flask app to a Kubernetes cluster using the kube
 - This command runs kubectl apply -f kubernetes-manifest.yaml, which reads the Kubernetes manifest file and deploys the application to the Kubernetes cluster.
 - The environment variable KUBECONFIG is securely stored in GitHub Secrets and contains the credentials and configuration needed to access your Kubernetes cluster.
 
-For the purpose of integrating security into DevOps practices, The Test job depends on the success of the Build job to run and also the Delopoy job depends on the success of the Build and Test jobs to run
+For the purpose of integrating security into DevOps practices, The Test job depends on the success of the Build job to run and the Deploy job depends also on the success of the Build and Test jobs to run
 
 # Deploying Flask Webapp to Kubernetes(KinD)
 
