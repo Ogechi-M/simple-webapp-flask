@@ -104,12 +104,13 @@ docker run -p 5000:5000 <dockerhub-username>/<repo-name>:<tag>
 
 The following security measures were implemented in the process of building this project.
 
-- Using a minimal base image in Dockerfile ubuntu:20.04
 
-- The Docker image was scanned for vulnerabilities using Trivy
+- The Docker image was scanned for vulnerabilities using Trivy.
 
 - Updated the docker file to enhance security and set the environmental variables for non interactive installation. The apt install command cleans up unnecessary files after installation.
 
 - Set resource limits in kubernetes to help avoid resource exaustion and malicious attacks such as Denial of service (DOS).
+
+- Limited the containers privillage using securitycontext by setting the container to run as non root in the kubernetes manifest.
 
 - Implemented network policies in the kubernetes manifest file to restrict traffics between pods and also to control which pods can communicate with each other.
