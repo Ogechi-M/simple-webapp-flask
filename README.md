@@ -107,3 +107,7 @@ The following security measures were implemented in the process of building this
 - Using a minimal base image in Dockerfile ubuntu:20.04
 
 - The Docker image was scanned for vulnerabilities using Trivy
+
+- Updated the docker file to enhance security and set the environmental variables for non interactive installation. The apt install command cleans up unnecessary files after installation.
+
+- Implemented network policies in the kubernetes manifest file to restrict traffics between pods and also to control which pods can communicate with each other.
