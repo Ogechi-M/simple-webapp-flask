@@ -133,6 +133,13 @@ After deploying, you can check the service for the NodePort:
 ```bash
 kubectl get services
 ```
+
+Once you have the NodePort, access the Flask app in your browser at:
+
+```bash
+http://localhost:30000
+```
+
 # Security Measures Implemented
 
 The following security measures were implemented in the process of building this project.
