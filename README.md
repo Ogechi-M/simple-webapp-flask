@@ -5,7 +5,7 @@ This is used in the demonstration of the development of Ansible Playbooks. The a
 
 # Prerequisites
 
-**Python 3.x** - Python is required to run this application locally.
+**Python 3.x** - Python is required to run this application locally. 
 
 **Docker** - Docker is used to containerize the application and run it locally.
 
