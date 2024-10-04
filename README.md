@@ -198,3 +198,7 @@ The following security measures were implemented in the process of building this
 - Limited the containers privillage using securitycontext by setting the container to run as non root in the kubernetes manifest.
 
 - Implemented network policies in the kubernetes manifest file to restrict traffics between pods and also to control which pods can communicate with each other.
+
+- In the CI/CD pipeline, a test job was included to test the code to ensure it works as expected by running unit tests.
+
+- Also only runs sucessfully if all the jobs where successful.
